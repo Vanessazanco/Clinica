@@ -1,17 +1,14 @@
 package clinica.med.apiClinica.controller;
 
 import clinica.med.apiClinica.funcionario.DadosCadastroFuncionario;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("funcionarios")
 public class FuncionarioController {
 
     @PostMapping
-    public void cadastrar(@ResponseBody DadosCadastroFuncionario dados){
+    public void cadastrar(@RequestBody DadosCadastroFuncionario dados){
 
 
     }
