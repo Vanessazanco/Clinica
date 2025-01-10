@@ -1,5 +1,14 @@
 package clinica.med.apiClinica.endereco;
 
+import jakarta.persistence.Embeddable;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Embeddable
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Endereco {
     private String logadouro;
     private String bairro;
@@ -7,4 +16,13 @@ public class Endereco {
     private String uf;
     private String complemento;
     private String numero;
+
+    public Endereco(DadosEndereco dados) {
+        this.logadouro = dados.logadouro();
+        this.bairro = dados.bairro();
+        this.cep = dados.cep();
+        this.uf = dados.uf();
+        this.complemento = dados.complemento();
+        this.numero = dados.numero();
+    }
 }
