@@ -1,12 +1,12 @@
 package clinica.med.apiClinica.funcionario;
 
-import clinica.med.apiClinica.endereco.Endereco;
+import clinica.med.apiClinica.endereco.DadosEndereco;
 
 public record DadosCadastroFuncionario(
         String nome,
         String email,
         String crm,
         Especialidade especialidade,
-        Endereco endereco
+        DadosEndereco endereco
                                        ) {
 }

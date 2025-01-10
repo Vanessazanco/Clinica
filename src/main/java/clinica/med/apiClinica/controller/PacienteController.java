@@ -1,6 +1,7 @@
-package clinica.med.apiClinica.paciente;
+package clinica.med.apiClinica.controller;
 
 
+import clinica.med.apiClinica.paciente.DadosCadastroPaciente;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

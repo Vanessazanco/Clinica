@@ -1,11 +1,10 @@
 package clinica.med.apiClinica.endereco;
 
-public record Endereco(
-        String logadouro,
-        String Bairro,
-        String cep,
-        String uf,
-        String complemento,
-        String numero
-) {
+public class Endereco {
+    private String logadouro;
+    private String bairro;
+    private String cep;
+    private String uf;
+    private String complemento;
+    private String numero;
 }

@@ -10,7 +10,6 @@ public class FuncionarioController {
     @PostMapping
     public void cadastrar(@RequestBody DadosCadastroFuncionario dados){
 
-
     }
 
 }
