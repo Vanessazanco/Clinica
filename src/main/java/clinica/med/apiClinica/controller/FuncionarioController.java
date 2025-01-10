@@ -15,7 +15,7 @@ public class FuncionarioController {
 
     @PostMapping
     public void cadastrar(@RequestBody DadosCadastroFuncionario dados){
-        repository.save(new Funcionario(dados);
+        repository.save(new Funcionario(dados));
     }
 
 }
