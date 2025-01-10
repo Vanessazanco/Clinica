@@ -25,7 +25,8 @@ public class FuncionarioController {
     }
     @GetMapping
     public List<DadosListarFuncionario> listar(){
-        return repository.findAll();
+        return repository.findAll().stream()
+                .map(DadosListarFuncionario::new).toList();
     }
 
 }

@@ -6,5 +6,13 @@ public record DadosListarFuncionario(
         String crm,
         Especialidade especialidade
 ) {
+    public DadosListarFuncionario(Funcionario funcionario){
+        this(
+                funcionario.getNome(),
+                funcionario.getEmail(),
+                funcionario.getCrm(),
+                funcionario.getEspecialidade()
+        );
+    }
 
 }
