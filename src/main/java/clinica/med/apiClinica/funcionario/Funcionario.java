@@ -18,6 +18,7 @@ public class Funcionario {
         private String nome;
         private String email;
         private String crm;
+        private String telefone;
 
         @Enumerated(EnumType.STRING)
         private Especialidade especialidade;
@@ -25,10 +26,14 @@ public class Funcionario {
         @Embedded
         private Endereco endereco;
 
+        public Funcionario() {
+        }
+
         public Funcionario(DadosCadastroFuncionario dados) {
                 this.nome= dados.nome();
                 this.email= dados.email();
                 this.crm= dados.crm();
+                this.telefone = dados.telefone();
                 this.especialidade = dados.especialidade();
                 this.endereco= new Endereco(dados.endereco());
         }
