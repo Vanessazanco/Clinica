@@ -18,8 +18,6 @@ public class Endereco {
     private String complemento;
     private String numero;
 
-    public Endereco() {
-    }
 
     public Endereco(DadosEndereco dados) {
         this.logradouro = dados.logradouro();

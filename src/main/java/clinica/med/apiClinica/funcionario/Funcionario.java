@@ -7,6 +7,7 @@ import lombok.*;
 @Table(name = "funcionarios")
 @Entity(name = "Funcionario")
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
@@ -25,9 +26,6 @@ public class Funcionario {
 
         @Embedded
         private Endereco endereco;
-
-        public Funcionario() {
-        }
 
         public Funcionario(DadosCadastroFuncionario dados) {
                 this.nome= dados.nome();

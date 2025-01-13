@@ -7,6 +7,9 @@ import clinica.med.apiClinica.funcionario.FuncionarioRepository;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -24,9 +27,9 @@ public class FuncionarioController {
         repository.save(new Funcionario(dados));
     }
     @GetMapping
-    public List<DadosListarFuncionario> listar(){
-        return repository.findAll().stream()
-                .map(DadosListarFuncionario::new).toList();
+    public Page<DadosListarFuncionario> listar(@PageableDefault(size = 10, sort = {"nome"}) Pageable paginacao) {
+        return repository.findAll(paginacao).map(DadosListarFuncionario::new);
     }
+
 
 }
