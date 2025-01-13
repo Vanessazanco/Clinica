@@ -6,11 +6,11 @@ public record DadosListarFuncionario(
         String crm,
         Especialidade especialidade
 ) {
-    public DadosListarFuncionario(Funcionario funcionario){
-        this(funcionario.getNome(),
-                funcionario.getEmail(),
-                funcionario.getCrm(),
-                funcionario.getEspecialidade());
+    public DadosListarFuncionario(String nome, String email, String crm, Especialidade especialidade) {
+        this.nome = nome;
+        this.email = email;
+        this.crm = crm;
+        this.especialidade = especialidade;
     }
 
 }

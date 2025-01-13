@@ -6,11 +6,11 @@ import lombok.*;
 
 @Table(name = "funcionarios")
 @Entity(name = "Funcionario")
-@Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
+@Getter
+@Setter
 public class Funcionario {
 
         @Id

@@ -28,7 +28,7 @@ public class FuncionarioController {
     }
     @GetMapping
     public Page<DadosListarFuncionario> listar(@PageableDefault(size = 10, sort = {"nome"}) Pageable paginacao) {
-        return repository.findAll(paginacao).map(DadosListarFuncionario::new);
+        return repository.findAllFuncionarios(paginacao);
     }
 
 
