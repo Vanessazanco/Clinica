@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 
 
 @Getter
-@NoArgsConstructor
 @AllArgsConstructor
 @Embeddable
 public class Endereco {
