@@ -13,15 +13,19 @@ import lombok.NoArgsConstructor;
 public class Endereco {
     private String logradouro;
     private String bairro;
+    private String cidade;
     private String cep;
     private String uf;
     private String complemento;
     private String numero;
 
+    public Endereco() {
+    }
 
     public Endereco(DadosEndereco dados) {
         this.logradouro = dados.logradouro();
         this.bairro = dados.bairro();
+        this.cidade = dados.cidade();
         this.cep = dados.cep();
         this.uf = dados.uf();
         this.complemento = dados.complemento();
