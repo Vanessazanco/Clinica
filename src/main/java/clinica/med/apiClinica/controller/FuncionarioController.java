@@ -1,9 +1,6 @@
 package clinica.med.apiClinica.controller;
 
-import clinica.med.apiClinica.funcionario.DadosCadastroFuncionario;
-import clinica.med.apiClinica.funcionario.DadosListarFuncionario;
-import clinica.med.apiClinica.funcionario.Funcionario;
-import clinica.med.apiClinica.funcionario.FuncionarioRepository;
+import clinica.med.apiClinica.funcionario.*;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +26,12 @@ public class FuncionarioController {
     @GetMapping
     public Page<DadosListarFuncionario> listar(@PageableDefault(size = 15, sort = {"nome"}) Pageable paginacao) {
         return repository.findAllFuncionarios(paginacao);
+    }
+
+    @PutMapping
+    @Transactional
+    public void atualizar(@RequestBody @Valid DadosAtulizarFuncionario dados) {
+
     }
 
 
