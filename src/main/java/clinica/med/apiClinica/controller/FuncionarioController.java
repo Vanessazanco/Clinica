@@ -9,7 +9,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 @RestController
 @RequestMapping("funcionarios")
@@ -34,6 +33,5 @@ public class FuncionarioController {
         Funcionario funcionario = repository.findById(dados.id()).get();
         funcionario.atualizar(dados);
     }
-
 
 }
