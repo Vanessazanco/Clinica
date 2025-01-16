@@ -1,6 +1,7 @@
 package clinica.med.apiClinica.funcionario;
 import clinica.med.apiClinica.endereco.Endereco;
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import lombok.*;
 
 
@@ -34,5 +35,18 @@ public class Funcionario {
                 this.telefone = dados.telefone();
                 this.especialidade = dados.especialidade();
                 this.endereco= new Endereco(dados.endereco());
+        }
+
+        public void atualizar(@Valid DadosAtulizarFuncionario dados) {
+                if (dados.nome() != null) {
+                        this.nome = dados.nome();
+                }
+               
+                if (dados.telefone() != null) {
+                        this.telefone = dados.telefone();
+                }
+                if (dados.endereco() != null) {
+                        this.endereco = new Endereco(dados.endereco());
+                }
         }
 }

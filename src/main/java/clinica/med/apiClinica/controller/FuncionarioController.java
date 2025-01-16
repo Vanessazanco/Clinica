@@ -31,7 +31,8 @@ public class FuncionarioController {
     @PutMapping
     @Transactional
     public void atualizar(@RequestBody @Valid DadosAtulizarFuncionario dados) {
-
+        Funcionario funcionario = repository.findById(dados.id()).get();
+        funcionario.atualizar(dados);
     }
 
 
