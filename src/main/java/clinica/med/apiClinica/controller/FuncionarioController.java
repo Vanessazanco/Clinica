@@ -34,4 +34,9 @@ public class FuncionarioController {
         funcionario.atualizar(dados);
     }
 
+    @DeleteMapping("/{id}")
+    @Transactional
+    public void deletar(@PathVariable Long id) {
+      repository.deleteById(id);
+      }
 }
