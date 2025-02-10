@@ -1,7 +1,6 @@
 package clinica.med.apiClinica.funcionario;
 import clinica.med.apiClinica.endereco.Endereco;
 import jakarta.persistence.*;
-import jakarta.validation.Valid;
 import lombok.*;
 
 
@@ -11,7 +10,6 @@ import lombok.*;
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 @Getter
-@Setter
 public class Funcionario {
 
         @Id
